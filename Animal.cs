@@ -59,7 +59,23 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Cat : Animal
+	class Vertebrate : Animal
+	{
+		public Vertebrate(string _greeting) : base(_greeting)
+		{
+			greeting += " I am a vertebrate.";
+		}
+	}
+
+	class Invertebrate : Animal
+	{
+		public Invertebrate(string _greeting) : base(_greeting)
+		{
+			greeting += " I am an invertebrate. ";
+		}
+	}
+
+	class Cat : Vertebrate
 	{
 		public Cat() : base("I am a Cat")
 		{
@@ -67,7 +83,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Dog : Animal
+	class Dog : Vertebrate
 	{
 		public Dog() : base("I am a Dog")
 		{
@@ -75,7 +91,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Bird : Animal
+	class Bird : Vertebrate
 	{
 		public Bird() : base("I am a Bird")
 		{
@@ -83,7 +99,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Sheep : Animal
+	class Sheep : Vertebrate
 	{
 		public Sheep() : base("I am a Sheep")
 		{
@@ -91,7 +107,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Pig : Animal
+	class Pig : Vertebrate
 	{
 		public Pig() : base("I am a Pig")
 		{
@@ -99,7 +115,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Cow : Animal
+	class Cow : Vertebrate
 	{
 		public Cow() : base("I am a Cow")
 		{
@@ -107,7 +123,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Horse : Animal
+	class Horse : Vertebrate
 	{
 		public Horse() : base("I am a Horse")
 		{
@@ -115,7 +131,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Fish : Animal
+	class Fish : Vertebrate
 	{
 		public Fish() : base("I am a Fish")
 		{
@@ -123,7 +139,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Lion : Animal
+	class Lion : Vertebrate
 	{
 		public Lion() : base("I am a Lion")
 		{
@@ -131,7 +147,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Bee : Animal
+	class Bee : Invertebrate
 	{
 		public Bee() : base("I am a Bee")
 		{
@@ -139,7 +155,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Frog : Animal
+	class Frog : Vertebrate
 	{
 		public Frog() : base("I am a Frog")
 		{
@@ -147,7 +163,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Duck : Animal
+	class Duck : Vertebrate
 	{
 		public Duck() : base("I am a Duck")
 		{
@@ -155,7 +171,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Jellyfish : Animal
+	class Jellyfish : Invertebrate
 	{
 		public Jellyfish() : base("I am a Jellyfish")
 		{
@@ -163,7 +179,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Lad : Animal
+	class Lad : Invertebrate
 	{
 		public Lad() : base("I am a Lad")
 		{
@@ -171,7 +187,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Owen : Animal
+	class Owen : Vertebrate
 	{
 		public Owen() : base("I am Owen")
 		{
