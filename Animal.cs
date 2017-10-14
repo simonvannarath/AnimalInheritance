@@ -1,7 +1,17 @@
+/* NSI TAFE St Leonards Cert IV Digital and Interactive Games (Programming) *
+ * Learner :        Simon Vannarath                                         *
+ * Trainer/Class :  Manny Vaccaro - Object Oriented Programming             *
+ *                                                                          *
+ * WEEK 1 CHALLENGE - "Inheritance"                                         *
+ * Due Date:          17 October 2017                                       *
+ */
+
+
 using System;
 
 namespace Animal_Inheritance
 {
+	//---- Base Class --------
 	class Animal
 	{
 		protected string greeting;
@@ -10,12 +20,12 @@ namespace Animal_Inheritance
 		{
 			Animal cat = new Cat();
 			Animal dog = new Dog();
-			Animal bird = new Bird();
+			Animal robin= new Robin();
 			Animal sheep = new Sheep();
 			Animal pig = new Pig();
 			Animal cow = new Cow();
 			Animal horse = new Horse();
-			Animal fish = new Fish();
+			Animal gfish = new Goldfish();
 			Animal lion = new Lion();
 			Animal bee = new Bee();
 			Animal frog = new Frog();
@@ -26,12 +36,12 @@ namespace Animal_Inheritance
 
 			Console.WriteLine(cat.Talk());
 			Console.WriteLine(dog.Talk());
-			Console.WriteLine(bird.Talk());
+			Console.WriteLine(robin.Talk());
 			Console.WriteLine(sheep.Talk());
 			Console.WriteLine(pig.Talk());
 			Console.WriteLine(cow.Talk());
 			Console.WriteLine(horse.Talk());
-			Console.WriteLine(fish.Talk());
+			Console.WriteLine(gfish.Talk());
 			Console.WriteLine(lion.Talk());
 			Console.WriteLine(bee.Talk());
 			Console.WriteLine(frog.Talk());
@@ -59,6 +69,8 @@ namespace Animal_Inheritance
 		}
 	}
 
+//----- 1st Level derived classes (Animal > Vertebrate/Invertebrate)
+
 	class Vertebrate : Animal
 	{
 		public Vertebrate(string _greeting) : base(_greeting)
@@ -71,11 +83,63 @@ namespace Animal_Inheritance
 	{
 		public Invertebrate(string _greeting) : base(_greeting)
 		{
-			greeting += " I am an invertebrate. ";
+			greeting += " I am an invertebrate.";
 		}
 	}
 
-	class Cat : Vertebrate
+//----- 2nd Level derived classes (Animal > Vertebrate/Invertebrate > Mammal/Bird/etc.)
+
+	class Mammal : Vertebrate
+	{
+		public Mammal(string _greeting) : base(_greeting)
+		{
+			greeting += " I am a mammal.";
+		}
+	}
+
+	class Bird : Vertebrate
+	{
+		public Bird(string _greeting) : base(_greeting)
+		{
+			greeting += " I am a bird.";
+		}
+	}
+
+	class Fish : Vertebrate
+	{
+		public Fish(string _greeting) : base(_greeting)
+		{
+			greeting += " I am a fish.";
+		}
+	}
+
+	class Amphibian : Vertebrate
+	{
+		public Amphibian(string _greeting) : base(_greeting)
+		{
+			greeting += " I am an amphibian.";
+		}
+	}
+
+	class Arthropod : Invertebrate
+	{
+		public Arthropod(string _greeting) : base(_greeting)
+		{
+			greeting += " I am an arthropod.";
+		}
+	}
+
+	class Cnidarian : Invertebrate
+	{
+		public Cnidarian(string _greeting) : base(_greeting)
+		{
+			greeting += " I am a cnidarian.";
+		}
+	}
+
+//----- 3rd Level derived classes
+
+	class Cat : Mammal
 	{
 		public Cat() : base("I am a Cat")
 		{
@@ -83,7 +147,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Dog : Vertebrate
+	class Dog : Mammal
 	{
 		public Dog() : base("I am a Dog")
 		{
@@ -91,15 +155,15 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Bird : Vertebrate
+	class Robin : Bird
 	{
-		public Bird() : base("I am a Bird")
+		public Robin() : base("I am a Robin")
 		{
-			greeting += " Chirp!";
+			greeting += " Cheep!";
 		}
 	}
 
-	class Sheep : Vertebrate
+	class Sheep : Mammal
 	{
 		public Sheep() : base("I am a Sheep")
 		{
@@ -107,7 +171,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Pig : Vertebrate
+	class Pig : Mammal
 	{
 		public Pig() : base("I am a Pig")
 		{
@@ -115,7 +179,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Cow : Vertebrate
+	class Cow : Mammal
 	{
 		public Cow() : base("I am a Cow")
 		{
@@ -123,7 +187,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Horse : Vertebrate
+	class Horse : Mammal
 	{
 		public Horse() : base("I am a Horse")
 		{
@@ -131,15 +195,15 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Fish : Vertebrate
+	class Goldfish : Fish
 	{
-		public Fish() : base("I am a Fish")
+		public Goldfish() : base("I am a Goldfish")
 		{
 			greeting += " Bloop!";
 		}
 	}
 
-	class Lion : Vertebrate
+	class Lion : Mammal
 	{
 		public Lion() : base("I am a Lion")
 		{
@@ -147,7 +211,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Bee : Invertebrate
+	class Bee : Arthropod
 	{
 		public Bee() : base("I am a Bee")
 		{
@@ -155,7 +219,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Frog : Vertebrate
+	class Frog : Amphibian
 	{
 		public Frog() : base("I am a Frog")
 		{
@@ -163,7 +227,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Duck : Vertebrate
+	class Duck : Bird
 	{
 		public Duck() : base("I am a Duck")
 		{
@@ -171,7 +235,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Jellyfish : Invertebrate
+	class Jellyfish : Cnidarian
 	{
 		public Jellyfish() : base("I am a Jellyfish")
 		{
@@ -179,7 +243,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Lad : Invertebrate
+	class Lad : Mammal
 	{
 		public Lad() : base("I am a Lad")
 		{
@@ -187,7 +251,7 @@ namespace Animal_Inheritance
 		}
 	}
 
-	class Owen : Vertebrate
+	class Owen : Mammal
 	{
 		public Owen() : base("I am Owen")
 		{
