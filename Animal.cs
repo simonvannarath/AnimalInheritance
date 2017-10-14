@@ -8,8 +8,8 @@ namespace Animal_Inheritance
 
 		static void Main(string[] args)
 		{
-			Animal newAnimal = new Animal();
-			Console.WriteLine(newAnimal.Talk());
+			Animal cat = new Cat();
+			Console.WriteLine(cat.Talk());
 			Console.ReadLine();
 		}
 
@@ -22,7 +22,15 @@ namespace Animal_Inheritance
 		{
 			return greeting;
 		}
-
 	}
+
+	class Cat : Animal
+	{
+		public Cat()
+		{
+			greeting = "Meow!";
+		}
+	}
+
 
 }
