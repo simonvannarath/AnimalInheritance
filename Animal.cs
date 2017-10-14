@@ -10,16 +10,47 @@ namespace Animal_Inheritance
 		{
 			Animal cat = new Cat();
 			Animal dog = new Dog();
+			Animal bird = new Bird();
+			Animal sheep = new Sheep();
+			Animal pig = new Pig();
+			Animal cow = new Cow();
+			Animal horse = new Horse();
+			Animal fish = new Fish();
+			Animal lion = new Lion();
+			Animal bee = new Bee();
+			Animal frog = new Frog();
+			Animal duck = new Duck();
+			Animal jfish = new Jellyfish();
+			Animal lad = new Lad();
+			Animal owen = new Owen();
 
-			Console.WriteLine("A cat says: " + cat.Talk());
-			Console.WriteLine("A dog says: " + dog.Talk());
+			Console.WriteLine(cat.Talk());
+			Console.WriteLine(dog.Talk());
+			Console.WriteLine(bird.Talk());
+			Console.WriteLine(sheep.Talk());
+			Console.WriteLine(pig.Talk());
+			Console.WriteLine(cow.Talk());
+			Console.WriteLine(horse.Talk());
+			Console.WriteLine(fish.Talk());
+			Console.WriteLine(lion.Talk());
+			Console.WriteLine(bee.Talk());
+			Console.WriteLine(frog.Talk());
+			Console.WriteLine(duck.Talk());
+			Console.WriteLine(jfish.Talk());
+			Console.WriteLine(lad.Talk());
+			Console.WriteLine(owen.Talk());
 
 			Console.ReadLine();
 		}
 
 		public Animal()
 		{
-			greeting = "Hello!";
+			greeting = "I am an Animal";
+		}
+
+		public Animal(string _greeting)
+		{
+			greeting = _greeting;
 		}
 
 		public string Talk()
@@ -30,121 +61,121 @@ namespace Animal_Inheritance
 
 	class Cat : Animal
 	{
-		public Cat()
+		public Cat() : base("I am a Cat")
 		{
-			greeting = "Meow!";
+			greeting += " Meow!";
 		}
 	}
 
 	class Dog : Animal
 	{
-		public Dog()
+		public Dog() : base("I am a Dog")
 		{
-			greeting = "Bark!";
+			greeting += " Bark!";
 		}
 	}
 
 	class Bird : Animal
 	{
-		public Bird()
+		public Bird() : base("I am a Bird")
 		{
-			greeting = "Chirp!";
+			greeting += " Chirp!";
 		}
 	}
 
 	class Sheep : Animal
 	{
-		public Sheep()
+		public Sheep() : base("I am a Sheep")
 		{
-			greeting = "Baa!";
+			greeting += " Baa!";
 		}
 	}
 
 	class Pig : Animal
 	{
-		public Pig()
+		public Pig() : base("I am a Pig")
 		{
-			greeting = "Oink!";
+			greeting += " Oink!";
 		}
 	}
 
 	class Cow : Animal
 	{
-		public Cow()
+		public Cow() : base("I am a Cow")
 		{
-			greeting = "Moo!";
+			greeting += " Moo!";
 		}
 	}
 
 	class Horse : Animal
 	{
-		public Horse()
+		public Horse() : base("I am a Horse")
 		{
-			greeting = "Neigh!";
+			greeting += " Neigh!";
 		}
 	}
 
 	class Fish : Animal
 	{
-		public Fish()
+		public Fish() : base("I am a Fish")
 		{
-			greeting = "Bloop!";
+			greeting += " Bloop!";
 		}
 	}
 
 	class Lion : Animal
 	{
-		public Lion()
+		public Lion() : base("I am a Lion")
 		{
-			greeting = "Roar!";
+			greeting += " Roar!";
 		}
 	}
 
 	class Bee : Animal
 	{
-		public Bee()
+		public Bee() : base("I am a Bee")
 		{
-			greeting = "Bzzz!";
+			greeting += " Bzzz!";
 		}
 	}
 
 	class Frog : Animal
 	{
-		public Frog()
+		public Frog() : base("I am a Frog")
 		{
-			greeting = "Ribbit!";
+			greeting += " Ribbit!";
 		}
 	}
 
 	class Duck : Animal
 	{
-		public Duck()
+		public Duck() : base("I am a Duck")
 		{
-			greeting = "Quack!";
+			greeting += " Quack!";
 		}
 	}
 
 	class Jellyfish : Animal
 	{
-		public Jellyfish()
+		public Jellyfish() : base("I am a Jellyfish")
 		{
-			greeting = "...";
+			greeting += " ...";
 		}
 	}
 
 	class Lad : Animal
 	{
-		public Lad()
+		public Lad() : base("I am a Lad")
 		{
-			greeting = "U wot kient?!";
+			greeting += " U wot kient?!";
 		}
 	}
 
 	class Owen : Animal
 	{
-		public Owen()
+		public Owen() : base("I am Owen")
 		{
-			greeting = "Waaaaowww!";
+			greeting += " Waaaaowww!";
 		}
 	}
 }
